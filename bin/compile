@@ -20,9 +20,9 @@ cd ${OCR_NAME}
 # Build
 ./autogen.sh
 mkdir ${TESSERACT_OCR_DIR}
-make
-make install
-cd -
+# make
+# make install
+# cd -
 
 # # Install tessdata
 # wget https://github.com/tesseract-ocr/tessdata/archive/${DATA_VERSION}.tar.gz
