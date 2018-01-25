@@ -18,7 +18,6 @@ cd ${OCR_NAME}
 # Build
 ./autogen.sh
 mkdir ${TESSERACT_OCR_DIR}
-LIBLEPT_HEADERSDIR=/app/.heroku/leptonica/include/leptonica LDFLAGS="-L/app/.heroku/leptonica/lib ${LDFLAGS}" ./configure --prefix=${TESSERACT_OCR_DIR}
 make
 make install
 cd -
@@ -30,6 +29,6 @@ mkdir ${DATA_PREFIX}
 cp -a ${DATA_NAME}/. ${DATA_PREFIX}
 
 # Prepare profile
-echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/app/vendor/tesseract/lib/pkgconfig' > ${TESSERACT_PROFILE}
+echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${HOME}/vendor/tesseract/lib/pkgconfig' > ${TESSERACT_PROFILE}
 echo 'export PATH=\"$TESSERACT_OCR_DIR/bin:\$PATH\"' >> ${TESSERACT_PROFILE}
 echo 'export TESSDATA_PREFIX=\"$TESSERACT_OCR_DIR/\"' >> ${TESSERACT_PROFILE}
