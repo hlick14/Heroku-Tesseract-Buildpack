@@ -17,8 +17,8 @@ cd ${OCR_NAME}
 
 # Build
 ./autogen.sh
-mkdir ${OCR_PREFIX}
-LIBLEPT_HEADERSDIR=/app/.heroku/leptonica/include/leptonica LDFLAGS="-L/app/.heroku/leptonica/lib ${LDFLAGS}" ./configure --prefix=${OCR_PREFIX}
+mkdir ${TESSERACT_OCR_DIR}
+LIBLEPT_HEADERSDIR=/app/.heroku/leptonica/include/leptonica LDFLAGS="-L/app/.heroku/leptonica/lib ${LDFLAGS}" ./configure --prefix=${TESSERACT_OCR_DIR}
 make
 make install
 cd -
