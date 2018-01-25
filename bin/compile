@@ -8,6 +8,7 @@ DATA_NAME=tessdata-${DATA_VERSION}
 OCR_PREFIX=/app/.heroku/tesseract
 DATA_PREFIX=/app/.heroku/tesseract/share/tessdata
 TESSERACT_PROFILE=/app/.profile.d/tesseract.sh
+TESSERACT_OCR_DIR=${HOME}/vendor/tesseract-ocr
 
 # Prepare
 wget https://github.com/tesseract-ocr/tesseract/archive/${OCR_VERSION}.tar.gz
@@ -30,5 +31,5 @@ cp -a ${DATA_NAME}/. ${DATA_PREFIX}
 
 # Prepare profile
 echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/app/.heroku/tesseract/lib/pkgconfig' > ${TESSERACT_PROFILE}
-echo 'export PATH=$PATH:/app/.heroku/tesseract/bin' >> ${TESSERACT_PROFILE}
-echo 'export TESSDATA_PREFIX=/app/.heroku/tesseract/share' >> ${TESSERACT_PROFILE}
+echo 'export PATH=\"$TESSERACT_OCR_DIR/bin:\$PATH\"' >> ${TESSERACT_PROFILE}
+echo 'export TESSDATA_PREFIX=\"$TESSERACT_OCR_DIR/\"' >> ${TESSERACT_PROFILE}
