@@ -29,6 +29,6 @@ mkdir ${DATA_PREFIX}
 cp -a ${DATA_NAME}/. ${DATA_PREFIX}
 
 # Prepare profile
-echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${HOME}/vendor/tesseract/lib/pkgconfig' > ${TESSERACT_PROFILE}
-echo 'export PATH=\"$TESSERACT_OCR_DIR/bin:\$PATH\"' >> ${TESSERACT_PROFILE}
-echo 'export TESSDATA_PREFIX=\"$TESSERACT_OCR_DIR/\"' >> ${TESSERACT_PROFILE}
+# echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${HOME}/vendor/tesseract/lib/pkgconfig' > ${TESSERACT_PROFILE}
+# echo 'export PATH=\"$TESSERACT_OCR_DIR/bin:\$PATH\"' >> ${TESSERACT_PROFILE}
+# echo 'export TESSDATA_PREFIX=\"$TESSERACT_OCR_DIR/\"' >> ${TESSERACT_PROFILE}
