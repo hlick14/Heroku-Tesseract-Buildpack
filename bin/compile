@@ -21,7 +21,7 @@ cd ${OCR_NAME}
 ./autogen.sh
 mkdir ${TESSERACT_OCR_DIR}
 
-./configure --prefix=$HOME/local/
+# ./configure --prefix=$HOME/local/
 # make install
 # make
 # make install
