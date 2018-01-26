@@ -27,13 +27,13 @@ mkdir ${TESSERACT_OCR_DIR}
 # make install
 # cd -
 
-# # Install tessdata
-# wget https://github.com/tesseract-ocr/tessdata/archive/${DATA_VERSION}.tar.gz
-# tar xvf ${DATA_VERSION}.tar.gz
-# mkdir ${DATA_PREFIX}
-# cp -a ${DATA_NAME}/. ${DATA_PREFIX}
+# Install tessdata
+wget https://github.com/tesseract-ocr/tessdata/archive/${DATA_VERSION}.tar.gz
+tar xvf ${DATA_VERSION}.tar.gz
+mkdir ${DATA_PREFIX}
+cp -a ${DATA_NAME}/. ${DATA_PREFIX}
 
 # # Prepare profile
-# echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${HOME}/vendor/tesseract/lib/pkgconfig' > ${TESSERACT_PROFILE}
-# echo 'export PATH=\"$TESSERACT_OCR_DIR/bin:\$PATH\"' >> ${TESSERACT_PROFILE}
-# echo 'export TESSDATA_PREFIX=\"$TESSERACT_OCR_DIR/\"' >> ${TESSERACT_PROFILE}
+echo 'export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${HOME}/vendor/tesseract/lib/pkgconfig' > ${TESSERACT_PROFILE}
+echo 'export PATH=\"$TESSERACT_OCR_DIR/bin:\$PATH\"' >> ${TESSERACT_PROFILE}
+echo 'export TESSDATA_PREFIX=\"$TESSERACT_OCR_DIR/\"' >> ${TESSERACT_PROFILE}
